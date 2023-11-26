@@ -1,0 +1,58 @@
+@import './_var';
+
+.footer__contact__container {
+    display: flex;
+    width: 100%;
+    max-width: 10rem;
+    justify-content: space-between;
+    .contact__cube {
+        width: $size-cube;
+        height: $size-cube;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: spin 15s infinite linear;
+        &--face {
+            position: absolute;
+            width: $size-cube;
+            height: $size-cube;
+            background: $dark-bg-color;
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(calc($size-cube / 2));
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(calc($size-cube / 2));
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(calc($size-cube / 2));
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(calc($size-cube / 2));
+        }
+        .front {
+            transform: rotateY(0deg) translateZ(calc($size-cube / 2));
+        }
+        .back {
+            transform: rotateY(-180deg) translateZ(calc($size-cube / 2));
+        }
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+@media screen and (min-width: 1100px) {
+    .footer__contact__container {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+    .contact__cube:hover {
+        animation-play-state: paused;
+        translate: 0.8rem 0;
+    }
+}

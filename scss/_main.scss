@@ -1,0 +1,20 @@
+@import './_var';
+
+.main {
+    width: 100%;
+    position: relative;
+    top: 8rem;
+    z-index: 2;
+    &__description {
+        width: 80%;
+        margin: 0 auto 2rem;
+        max-width: 460px;
+        color: $dark-text-color;
+        font-size: 0.9rem;
+        font-weight: 100;
+        @media screen and (min-width: 800px) {
+            font-size: 1rem;
+            max-width: 1000px;
+        }
+    }
+}

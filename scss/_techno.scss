@@ -1,0 +1,43 @@
+@use './var';
+
+.main__container--card--containerDesc--techno {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // margin-top: auto;
+    padding: 0.5rem;
+    &--boxImgTechno {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0.2rem;
+        position: relative;
+        img{
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        &:hover {
+            scale: 1.1;
+            &::after {
+                content: var(--after-content, "");
+                transform-origin: center;
+                position: absolute;
+                top: -1.8rem;
+                left: 50%;
+                background-color: var.$border-card-color;
+                padding: 0.8rem 1rem;
+                border-radius: 40%;
+                box-shadow: 0px 0px 7px 7px rgba(131,125,125,1), inset 0px 0px 7px 2px rgba(131,125,125,1);
+                animation: appear 0.5s cubic-bezier(.17,2,.55,.67) forwards;
+            }
+        }
+    }
+}
+@keyframes appear {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
