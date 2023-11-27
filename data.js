@@ -35,6 +35,23 @@ export default data = [
     },
     {
         id: 3,
+        imgUrl: new URL("./img/screenshot-website/1440x900.png", import.meta.url),
+        alt: "Image de la page d'accueil de easy-time-clock",
+        title: "easy-time-clock",
+        link: "#",
+        techno: {
+            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
+            php: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", import.meta.url),
+            mysql: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", import.meta.url)
+        },
+        stack: "back-end",
+        inline: false,
+        desc: "EasyTimeClock est une application web qui permet de gérer les heures d'entrée et de sortie dans une entreprise, une crèche, ou tout autre lieu nécessitant une gestion du temps. C'est une solution simple, conçue pour une utilisation aussi intuitive et complète que possible. Pour plus d'informations sur le choix des différents modules afin d'être le plus adapté à vos besoins, ou sur l'utilisation, n'hésitez pas à visiter le site.",
+        seriousProject: true
+    },
+    {
+        id: 4,
         imgUrl: new URL("./img/screenshot-website/selim-dm.png", import.meta.url),
         alt: "Image de la page d'accueil du portfolio de selim-dm",
         title: "selim-dm.portfolio",
@@ -50,7 +67,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 4,
+        id: 5,
         imgUrl: new URL("./img/screenshot-website/bounce-cube.png", import.meta.url),
         alt: "Image de la page d'accueil de bounce-cube",
         title: "bounce-cube",
@@ -65,7 +82,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 5,
+        id: 6,
         imgUrl: new URL("./img/screenshot-website/wave-cube.png", import.meta.url),
         alt: "Image de la page d'accueil de wave-cube",
         title: "cube-wave",
@@ -81,7 +98,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 6,
+        id: 7,
         imgUrl: new URL("./img/screenshot-website/haunted-house.png", import.meta.url),
         alt: "Image de la page d'accueil de haunted-house",
         title: "haunted-house",
@@ -95,23 +112,6 @@ export default data = [
         stack: "front-end",
         inline: true,
         desc: "Petite animation créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon.",
-        seriousProject: true
-    },
-    {
-        id: 7,
-        imgUrl: new URL("./img/screenshot-website/1440x900.png", import.meta.url),
-        alt: "Image de la page d'accueil de easy-time-clock",
-        title: "easy-time-clock",
-        link: "#",
-        techno: {
-            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
-            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
-            php: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", import.meta.url),
-            mysql: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", import.meta.url)
-        },
-        stack: "back-end",
-        inline: false,
-        desc: "EasyTimeClock est une application web qui permet de gérer les heures d'entrée et de sortie dans une entreprise, une crèche, ou tout autre lieu nécessitant une gestion du temps. C'est une solution simple, conçue pour une utilisation aussi intuitive et complète que possible. Pour plus d'informations sur le choix des différents modules afin d'être le plus adapté à vos besoins, ou sur l'utilisation, n'hésitez pas à visiter le site.",
         seriousProject: true
     },
     {

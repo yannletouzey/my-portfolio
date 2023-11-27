@@ -17,23 +17,25 @@ export const createCard = (data) => {
 
         const containerDesc = document.createElement('div');
         containerDesc.classList.add('main__container--card--containerDesc');
-        const title = document.createElement('h3');
-        title.textContent = data[index].title;
+        const titleLink = document.createElement('a');
+        titleLink.classList.add('main__container--card--containerDesc--titleLink');
+        titleLink.href = data[index].link;
+        titleLink.target = '_blank';
+        titleLink.setAttribute('rel', 'noopener noreferrer');
+        const titleLinkText = document.createTextNode(data[index].title);
+        titleLink.appendChild(titleLinkText);
 
         const description = document.createElement('p');
         description.textContent = data[index].description;
         description.innerHTML += data[index].desc;
 
-        containerDesc.append(title, description);
+        containerDesc.append(titleLink, description);
         // Create box img techno
         const technoBox =  document.createElement('div')
         technoBox.classList.add('main__container--card--containerDesc--techno')
 
         technoImg.forEach(technoImgElement => {
             if (data[index].techno[technoImgElement.name]) {
-                for (let i = 0; i < 10; i++) {
-                    
-                }
                 const imgTechnoContainer = document.createElement('div')
                 imgTechnoContainer.classList.add('main__container--card--containerDesc--techno--boxImgTechno')
                 technoBox.append(imgTechnoContainer)
@@ -63,22 +65,21 @@ export const createCard = (data) => {
             c[index].style.perspective = '1000px';
             boxImage.style.transformStyle = 'preserve-3d';
             boxImage.style.transitionDuration = '0.5s';
-            
             if (sizeScreen >= 800) {
                 if (middleCard >= topTriggerScreen && middleCard <= bottomTriggerScreen) {
                     boxDesc.style.transitionDelay = '0.2s'
                     boxDesc.style.transitionDuration = '0.5s'
                     boxDesc.style.backgroundColor = '#3d3c3c'
-                    boxDesc.style.boxShadow = `0px 0px 15px 20px rgba(61 ,60 ,60 , 1)`;
+                    boxDesc.style.boxShadow = `0px 0px 15px 20px rgba(60, 60, 60, 1)`;
                     img.style.borderRadius = '2rem';
                     if (index % 2 === 0) {
                         img.style.backgroundColor = 'transparent'
                         boxImage.style.transform = 'rotateY(-20deg)';
-                        img.style.boxShadow = `10px 0px 0px 0px rgba(61 ,60 ,60 , 1)`;
+                        img.style.boxShadow = `10px 0px 0px 0px rgba(70, 70, 70, 1)`;
                     } else {
                         img.style.backgroundColor = 'transparent'
                         boxImage.style.transform = 'rotateY(20deg)';
-                        img.style.boxShadow = `-10px 0px 0px 0px rgba(61 ,60 ,60 , 1)`;
+                        img.style.boxShadow = `-10px 0px 0px 0px rgba(70, 70, 70, 1)`;
                     }
                 } else {
                     boxDesc.style.transitionDelay = '0'
@@ -86,50 +87,9 @@ export const createCard = (data) => {
                     boxDesc.style.backgroundColor = 'transparent'
                     img.style.borderRadius = '0.5rem';
                     boxImage.style.transform = 'rotateY(0)';
-                    boxDesc.style.boxShadow = `0 0 0 0 rgba(61 ,60 ,60, 0)`;
-                    img.style.boxShadow = `0 0 0 0 rgba(61 ,60 ,60 , 0)`;
+                    boxDesc.style.boxShadow = `0 0 0 0 rgba(60, 60, 60, 0)`;
+                    img.style.boxShadow = `0 0 0 0 rgba(70, 70, 70, 0)`;
                 }
-                
-                addEventListener('resize', () => {
-                    sizeScreen = window.innerWidth;
-                    heightScreen = window.innerHeight;
-                    topTriggerScreen = heightScreen - ((heightScreen / 3) * 2);
-                    bottomTriggerScreen = heightScreen - ((heightScreen / 3));
-                    if (sizeScreen >= 800) {
-                        if (middleCard >= topTriggerScreen && middleCard <= bottomTriggerScreen) {
-                            boxDesc.style.transitionDelay = '0.2s'
-                            boxDesc.style.transitionDuration = '0.5s'
-                            boxDesc.style.backgroundColor = '#3d3c3c'
-                            boxDesc.style.boxShadow = `0px 0px 15px 20px rgba(61 ,60 ,60 , 1)`;
-                            img.style.borderRadius = '2rem';
-                            if (index % 2 === 0) {
-                                img.style.backgroundColor = 'transparent'
-                                boxImage.style.transform = 'rotateY(-20deg)';
-                                img.style.boxShadow = `10px 0px 0px 0px rgba(61 ,60 ,60 , 1)`;
-                            } else {
-                                img.style.backgroundColor = 'transparent'
-                                boxImage.style.transform = 'rotateY(20deg)';
-                                img.style.boxShadow = `-10px 0px 0px 0px rgba(61 ,60 ,60 , 1)`;
-                            }
-                        } else {
-                            boxDesc.style.transitionDelay = '0'
-                            boxDesc.style.transitionDuration = '0.2s'
-                            boxDesc.style.backgroundColor = 'transparent'
-                            img.style.borderRadius = '0.5rem';
-                            boxImage.style.transform = 'rotateY(0)';
-                            boxDesc.style.boxShadow = `0 0 0 0 rgba(61 ,60 ,60, 0)`;
-                            img.style.boxShadow = `0 0 0 0 rgba(61 ,60 ,60 , 0)`;
-                        }
-                    } else {
-                        boxDesc.style.transitionDelay = '0'
-                        boxDesc.style.transitionDuration = '0.2s'
-                        boxDesc.style.backgroundColor = 'transparent'
-                        img.style.borderRadius = '0.5rem';
-                        boxImage.style.transform = 'rotateY(0)';
-                        boxDesc.style.boxShadow = `0 0 0 0 rgba(61 ,60 ,60, 0)`;
-                        img.style.boxShadow = `0 0 0 0 rgba(61 ,60 ,60 , 0)`;
-                    }
-                })
             } else {
                 boxDesc.style.transitionDelay = '0'
                 boxDesc.style.transitionDuration = '0.2s'
@@ -137,6 +97,46 @@ export const createCard = (data) => {
                 img.style.borderRadius = '0.5rem';
                 boxImage.style.transform = 'rotateY(0)';
             }
+            addEventListener('resize', () => {
+                sizeScreen = window.innerWidth;
+                heightScreen = window.innerHeight;
+                topTriggerScreen = heightScreen - ((heightScreen / 3) * 2);
+                bottomTriggerScreen = heightScreen - ((heightScreen / 3));
+                if (sizeScreen >= 800) {
+                    if (middleCard >= topTriggerScreen && middleCard <= bottomTriggerScreen) {
+                        boxDesc.style.transitionDelay = '0.2s'
+                        boxDesc.style.transitionDuration = '0.5s'
+                        boxDesc.style.backgroundColor = '#3d3c3c'
+                        boxDesc.style.boxShadow = `0px 0px 15px 20px rgba(60, 60, 60, 1)`;
+                        img.style.borderRadius = '2rem';
+                        if (index % 2 === 0) {
+                            img.style.backgroundColor = 'transparent'
+                            boxImage.style.transform = 'rotateY(-20deg)';
+                            img.style.boxShadow = `10px 0px 0px 0px rgba(70, 70, 70, 1)`;
+                        } else {
+                            img.style.backgroundColor = 'transparent'
+                            boxImage.style.transform = 'rotateY(20deg)';
+                            img.style.boxShadow = `-10px 0px 0px 0px rgba(70, 70, 70, 1)`;
+                        }
+                    } else {
+                        boxDesc.style.transitionDelay = '0'
+                        boxDesc.style.transitionDuration = '0.2s'
+                        boxDesc.style.backgroundColor = 'transparent'
+                        img.style.borderRadius = '0.5rem';
+                        boxImage.style.transform = 'rotateY(0)';
+                        boxDesc.style.boxShadow = `0 0 0 0 rgba(60, 60, 60, 0)`;
+                        img.style.boxShadow = `0 0 0 0 rgba(70, 70, 70, 0)`;
+                    }
+                } else {
+                    boxDesc.style.transitionDelay = '0'
+                    boxDesc.style.transitionDuration = '0.2s'
+                    boxDesc.style.backgroundColor = 'transparent'
+                    img.style.borderRadius = '0.5rem';
+                    boxImage.style.transform = 'rotateY(0)';
+                    boxDesc.style.boxShadow = `0 0 0 0 rgba(60, 60, 60, 0)`;
+                    img.style.boxShadow = `0 0 0 0 rgba(70, 70, 70, 0)`;
+                }
+            })
         })
         const containerDesc = c[index].querySelector('.main__container--card--containerDesc');
         if (index % 2 === 0) {
