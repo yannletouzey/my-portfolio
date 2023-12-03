@@ -23,7 +23,7 @@ export const createCard = (data) => {
         titleLink.target = '_blank';
         titleLink.setAttribute('rel', 'noopener noreferrer');
         const titleLinkText = document.createTextNode(data[index].title);
-        titleLink.appendChild(titleLinkText);
+        titleLink.append(titleLinkText);
 
         const description = document.createElement('p');
         description.textContent = data[index].description;
