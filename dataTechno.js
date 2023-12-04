@@ -12,6 +12,12 @@ export default technoImg = [
         img: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url)
     }, 
     {
+        name: 'sass',
+        nameFull: 'sass', 
+        color: '#CB6699',
+        img: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", import.meta.url)
+    }, 
+    {
         name: 'js',
         nameFull: 'JavaScript', 
         color: '#EFDB50',

@@ -1,11 +1,27 @@
 export default data = [
     {
         id: 1,
+        imgUrl: new URL("./img/screenshot-website/yannletouzey.jpeg", import.meta.url),
+        alt: "Image du portfolio de Yann Letouzey",
+        title: "yannletouzey.fr",
+        link: "#",
+        techno: {
+            sass: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", import.meta.url),
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
+        },
+        stack: "front-end",
+        inline: false,
+        desc: "Mon second portfolio",
+        seriousProject: true
+    },
+    {
+        id: 2,
         imgUrl: new URL("./img/screenshot-website/easy-mailing/accueil.png", import.meta.url),
         alt: "Image de la page d'accueil de easy-mailing",
         title: "easy-mailing",
         link: "#",
         techno: {
+            sass: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", import.meta.url),
             react: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", import.meta.url),
             node: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", import.meta.url),
             express: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", import.meta.url),
@@ -17,14 +33,12 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 2,
+        id: 3,
         imgUrl: new URL("./img/screenshot-website/trouve-ta-ville.png", import.meta.url),
         alt: "Image de la page d'accueil de trouve-ta-ville",
         title: "trouve-ta-ville",
-        link: "https://trouve-ta-ville.yann-letouzey.com/",
+        link: "http://yannletouzey.fr/trouve-ta-ville/",
         techno: {
-            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
-            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
             react: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", import.meta.url)
         },
@@ -34,13 +48,12 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 3,
+        id: 4,
         imgUrl: new URL("./img/screenshot-website/1440x900.png", import.meta.url),
         alt: "Image de la page d'accueil de easy-time-clock",
         title: "easy-time-clock",
         link: "#",
         techno: {
-            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
             php: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", import.meta.url),
             mysql: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", import.meta.url)
@@ -51,7 +64,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 4,
+        id: 5,
         imgUrl: new URL("./img/screenshot-website/selim-dm.png", import.meta.url),
         alt: "Image de la page d'accueil du portfolio de selim-dm",
         title: "selim-dm.portfolio",
@@ -67,7 +80,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 5,
+        id: 6,
         imgUrl: new URL("./img/screenshot-website/bounce-cube.png", import.meta.url),
         alt: "Image de la page d'accueil de bounce-cube",
         title: "bounce-cube",
@@ -82,7 +95,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 6,
+        id: 7,
         imgUrl: new URL("./img/screenshot-website/wave-cube.png", import.meta.url),
         alt: "Image de la page d'accueil de wave-cube",
         title: "cube-wave",
@@ -98,14 +111,12 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 7,
+        id: 8,
         imgUrl: new URL("./img/screenshot-website/haunted-house.png", import.meta.url),
         alt: "Image de la page d'accueil de haunted-house",
         title: "haunted-house",
         link: "https://haunted-house-blond-xi.vercel.app/",
         techno: {
-            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
-            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
             three: new URL("./img/logos/three.png", import.meta.url)
         },
@@ -115,7 +126,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 8,
+        id: 9,
         imgUrl: new URL("./img/screenshot-website/home-large.png", import.meta.url),
         alt: "Image de la page d'accueil de statistiques-covid",
         title: "statistiques-covid",
@@ -132,7 +143,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 9,
+        id: 10,
         imgUrl: new URL("./img/screenshot-website/cube-in-cube.png", import.meta.url),
         alt: "Image de la page d'accueil de cube-in-cube",
         title: "cube-in-cube",
@@ -148,7 +159,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 10,
+        id: 11,
         imgUrl: new URL("./img/screenshot-website/visuel-padding-margin.png", import.meta.url),
         alt: "Image de la page d'accueil de visual-padding-margin-css",
         title: "padding-margin-css",
@@ -164,7 +175,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 11,
+        id: 12,
         imgUrl: new URL("./img/screenshot-website/build-cube-css.png", import.meta.url),
         alt: "Image de la page d'accueil de build-cube-css",
         title: "build-cube-css",
@@ -180,7 +191,7 @@ export default data = [
         seriousProject: true
     },
     {
-        id: 12,
+        id: 13,
         imgUrl: new URL("./img/screenshot-website/cardiac-cohesion.png", import.meta.url),
         alt: "Image de la page d'accueil de cardiac-cohesion",
         title: "cardiac-cohesion",
